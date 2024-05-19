@@ -102,12 +102,11 @@ jobs:
     if: (success() || failure()) && needs.spelling.outputs.followup && contains(github.event_name, 'pull_request')
     steps:
     - name: comment
-      uses: check-spelling/check-spelling@main
+      uses: check-spelling/check-spelling@prerelease
       with:
         checkout: true
         spell_check_this: check-spelling/spell-check-this@prerelease
         task: ${{ needs.spelling.outputs.followup }}
-        experimental_apply_changes_via_bot: 1
 
   update:
     name: Update PR
@@ -126,8 +125,7 @@ jobs:
       cancel-in-progress: false
     steps:
     - name: apply spelling updates
-      uses: check-spelling/check-spelling@main
+      uses: check-spelling/check-spelling@prerelease
       with:
-        experimental_apply_changes_via_bot: 1
         checkout: true
         ssh_key: "${{ secrets.CHECK_SPELLING }}"
