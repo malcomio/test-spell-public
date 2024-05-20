@@ -30,3 +30,129 @@
 
 # ignore long runs of a single character:
 \b([A-Za-z])\g{-1}{3,}\b
+
+# ignore links as references
+^\[(.*)\]:.*$
+
+# broken??? \[(.*)\]
+
+# ignore social media handles etc. in authors.yml
+name:.*$
+avatar:.*$
+drupal:.*$
+github:.*$
+twitter:.*$
+linkedin:.*$
+team:.*$
+
+# ignore front matter
+^(\w+):.*$
+
+# ignore URLs
+\(http(s?):(.*)\)
+
+# images
+\(/images/(.*)\)
+
+# Automatically suggested patterns
+
+# https/http/file urls
+(?:\b(?:https?|ftp|file)://)[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]
+
+# file names
+[\w+]\.[\w+]
+
+# hex runs
+\b[0-9a-fA-F]{16,}\b
+
+# While you could try to match `http://` and `https://` by using `s?` in `https?://`, sometimes there
+# YouTube url
+\b(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|user/|playlist\?list=|watch\?v=|v/|)[-a-zA-Z0-9?&=_%]*
+
+# Compiler flags (Unix, Java/Scala)
+# Use if you have things like `-Pdocker` and want to treat them as `docker`
+(?:^|[\t ,>"'`=(])-(?:(?:J-|)[DPWXY]|[Llf])(?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,})
+
+# Lorem
+(?:\w|\s|[,.])*\b(?i)(?:amet|consectetur|cursus|dolor|eros|ipsum|lacus|libero|ligula|lorem|magna|neque|nulla|suscipit|tempus)\b(?:\w|\s|[,.])*
+
+# Twitter status
+\btwitter\.com/[^/\s"')]*(?:/status/\d+(?:\?[-_0-9a-zA-Z&=]*|)|)
+
+# GitHub SHAs (markdown)
+(?:\[`?[0-9a-f]+`?\]\(https:/|)/(?:www\.|)github\.com(?:/[^/\s"]+){2,}(?:/[^/\s")]+)(?:[0-9a-f]+(?:[-0-9a-zA-Z/#.]*|)\b|)
+
+# githubusercontent
+/[-a-z0-9]+\.githubusercontent\.com/[-a-zA-Z0-9?&=_\/.]*
+
+# gravatar
+\bgravatar\.com/avatar/[0-9a-f]+
+
+# mailto urls
+mailto:[-a-zA-Z=;:/?%&0-9+@.]{3,}
+
+# email addresses
+[-a-zA-Z=;:/?%&0-9+@.]{3,}
+
+# Wikipedia
+\ben\.wikipedia\.org/wiki/[-\w%.#]+
+
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#x?|\%23)[0-9_a-fA-FgGrR]*?[a-fA-FgGrR]{2,}[0-9_a-fA-FgGrR]*(?:[uUlL]{0,3}|[iu]\d+)\b
+
+# in check-spelling@v0.0.22+, printf markers aren't automatically consumed
+# printf markers
+(?<!\\)\\[nrt](?=[a-z]{2,})
+
+# hex in url queries
+=[0-9a-fA-F]*?(?:[A-F]{3,}|[a-f]{3,})[0-9a-fA-F]*?&
+
+# w3
+\bw3\.org/[-0-9a-zA-Z/#.]+
+
+# medium
+\bmedium\.com/\@?[^/\s"]+/[-\w]+
+
+# version suffix <word>v#
+(?:(?<=[A-Z]{2})V|(?<=[a-z]{2}|[A-Z]{2})v)\d+(?:\b|(?=[a-zA-Z_]))
+
+# Disqus
+\bdisqus\.com/[-\w/%.()!?&=_]*
+
+# Compiler flags (Windows / PowerShell)
+# This is a subset of the more general compiler flags pattern.
+# It avoids matching `-Path` to prevent it from being treated as `ath`
+(?:^|[\t ,"'`=(])-(?:[DPL](?=[A-Z]{2,})|[WXYlf](?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,}))
+
+# Amazon
+\bamazon\.com/[-\w]+/(?:dp/[0-9A-Z]+|)
+
+# YouTube image
+\bimg\.youtube\.com/vi/[-a-zA-Z0-9?&=_]*
+
+# Google Fonts
+\bfonts\.(?:googleapis|gstatic)\.com/[-/?=:;+&0-9a-zA-Z]*
+
+# stackexchange -- https://stackexchange.com/feeds/sites
+\b(?:askubuntu|serverfault|stack(?:exchange|overflow)|superuser).com/(?:questions/\w+/[-\w]+|a/)
+
+# Twitter profile images
+\btwimg\.com/profile_images/[_\w./]*
+
+# sha-... -- uses a fancy capture
+(\\?['"]|&quot;)[0-9a-f]{40,}\g{-1}
+
+# uuid:
+\b[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}\b
+
+# IServiceProvider / isAThing
+\b(?:I|isA)(?=(?:[A-Z][a-z]{2,})+\b)
+
+# node packages
+(["'])\@[^/'" ]+/[^/'" ]+\g{-1}
+
+# base64 encoded content, possibly wrapped in mime
+(?:^|[\s=;:?])[-a-zA-Z=;:/0-9+]{50,}(?:[\s=;:?]|$)
+
+# curl arguments
+\b(?:\\n|)curl(?:\s+-[a-zA-Z]{1,2}\b)*(?:\s+-[a-zA-Z]{3,})(?:\s+-[a-zA-Z]+)*
