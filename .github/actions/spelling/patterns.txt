@@ -59,8 +59,7 @@ team:.*$
 # https/http/file urls
 (?:\b(?:https?|ftp|file)://)[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]
 
-# file names
-[\w+]\.[\w+]
+#  broken? file names ??? [\w+]\.[\w+]
 
 # hex runs
 \b[0-9a-fA-F]{16,}\b
