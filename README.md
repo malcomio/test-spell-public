@@ -9,10 +9,12 @@ EXXXAMPLE
 
 This is an example README file that contains some spelling mistakes in order test `check-spelling`.
 
-This is an example README file that contains some spelling mistakes in order test `check-spelling`.
+```
+codeBlock
+misSpellllllingInCamelCase
+```
 
-This is an example README file that contains some spelling mistakes in order test `check-spelling`.
-
+This paragraph contains a `misssteak` inside inline code.
 
 [link text](https://example.com/spelllllling-mistake)
 
