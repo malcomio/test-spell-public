@@ -1,6 +1,19 @@
 # See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
 
-# this is a comment
+# ignore social media handles etc. in authors.yml
+name:.*$
+avatar:.*$
+drupal:.*$
+github:.*$
+twitter:.*$
+linkedin:.*$
+team:.*$
+
+# ignore front matter
+^(\w+):.*$
+
+# images
+\(/images/(.*)\)
 
 # marker to ignore all code on line
 ^.*/\* #no-spell-check-line \*/.*$
