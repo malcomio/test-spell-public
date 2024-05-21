@@ -9,6 +9,9 @@ twitter:.*$
 linkedin:.*$
 team:.*$
 
+# author names
+^[a-z_]:$
+
 # ignore front matter
 ^author:.*$
 
