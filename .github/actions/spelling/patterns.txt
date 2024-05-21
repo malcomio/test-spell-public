@@ -12,6 +12,10 @@ team:.*$
 # ignore front matter
 ^author:.*$
 
+# ignore links as references
+^\[(.*)\]:.*$
+\]\[(.*)\]
+
 # images
 \(/images/(.*)\)
 
