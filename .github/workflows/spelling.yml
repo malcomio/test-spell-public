@@ -1,6 +1,11 @@
 # See https://docs.check-spelling.dev/
 name: Check Spelling
 on:
+  push:
+    branches:
+      - "**"
+    tags-ignore:
+      - "**"
   pull_request_target:
     branches:
       - "**"
