@@ -10,7 +10,7 @@ linkedin:.*$
 team:.*$
 
 # author names
-^[a-z_]:$
+^([a-z_]+):$
 
 # ignore front matter
 ^author:.*$
