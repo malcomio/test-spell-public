@@ -10,7 +10,7 @@ linkedin:.*$
 team:.*$
 
 # ignore front matter
-^(\w+):.*$
+^author:.*$
 
 # images
 \(/images/(.*)\)
