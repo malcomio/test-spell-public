@@ -12,12 +12,13 @@ team:.*$
 # author names
 ^([a-z_]+):$
 
-# ignore front matter
+# ignore front matter fields individually
 ^author:.*$
 
 # ignore links as references
 ^\[(.*)\]:.*$
 \]\[(.*)\]
+^([a-z_]+): http$
 
 # images
 \(/images/(.*)\)
