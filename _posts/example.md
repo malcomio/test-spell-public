@@ -22,3 +22,4 @@ This is a [correctly-spelled link](https://example.com/rong) and this is an [inc
 This is a [correctly-spelled link][link_url] and this is an [inccorrectly-spelled link][link_url], using the link reference style.
 
 [link_url]: https://example.com/rong
+link_url2: https://example.com/rongooo
