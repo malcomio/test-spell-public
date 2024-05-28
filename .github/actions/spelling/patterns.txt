@@ -16,13 +16,16 @@ team:.*$
 ^author:.*$
 
 # ignore links as references
-^\[[a-z_\-]+\]:.*$
-\]\[[a-z_\-]+\]
-^([a-z_\-]+): http$
+^\[([a-z_-]+)\]:.*$
+\]\[([a-z_-]+)\]
+^([a-z_-]+): http$
 
 # images
-\(/images/([a-z_\-/]+)\)
-img src="([a-z_\-/]*)"
+\(/images/([a-z_-/]+)\)
+img src="([a-z_-/]+)"
+
+# code inside backticks
+\`([a-z]+)\`
 
 # marker to ignore all code on line
 ^.*/\* #no-spell-check-line \*/.*$
