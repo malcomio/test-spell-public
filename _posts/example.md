@@ -13,7 +13,6 @@ This is an example post for Jekyll markdown spell-checking.
 
 Some of the front matter items should be ignored by the spelling check.
 
-
 ## Links
 Only the link text should be caught by the spell checker, not the URLs.
 
