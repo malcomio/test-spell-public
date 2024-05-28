@@ -1,13 +1,12 @@
-Example
+# Example spell check
 
-
-This is an example README file that contains some spelling mistakes in order test `check-spelling`.
+This is an example README file that contains some spelling mistakes in order to test `check-spelling`.
 
 EXXXAMPLE
 
-This is an example README file that contains some spelling mistakes in order test `check-spelling`.
+[reference style link][link]
 
-baaad speling
+This is an example README file that contains some spelling mistakes in order test `check-spelling`.
 
 This is an example README file that contains some spelling mistakes in order test `check-spelling`.
 
@@ -18,3 +17,10 @@ This is an example README file that contains some spelling mistakes in order tes
 
 [links]: https://exxample.xom
 
+
+
+[link text](https://example.com/spelllllling-mistake)
+
+[Incorrrrrectly spelled link text](https://example.com/spelllllling-mistake)
+
+[link]: https://example.com/spelllllling-mistake
