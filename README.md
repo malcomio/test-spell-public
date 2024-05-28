@@ -11,6 +11,10 @@ baaad speling
 
 This is an example README file that contains some spelling mistakes in order test `check-spelling`.
 
+[link](https://notword.com)
+<img src="/images/example-notword.png" alt="typro in alt">
+
 This is an example README file that contains some spelling mistakes in order test `check-spelling`.
 
 [links]: https://exxample.xom
+
