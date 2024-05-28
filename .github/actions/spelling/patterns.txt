@@ -22,6 +22,7 @@ team:.*$
 
 # images
 \(/images/(.*)\)
+img src="(.*)"
 
 # marker to ignore all code on line
 ^.*/\* #no-spell-check-line \*/.*$
