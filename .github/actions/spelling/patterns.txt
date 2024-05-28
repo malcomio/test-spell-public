@@ -21,8 +21,8 @@ team:.*$
 ^([a-z_]+): http$
 
 # images
-\(/images/(\w*)\)
-img src="(\w*)"
+\(/images/([a-z_-/]+)\)
+img src="([a-z_-/]*)"
 
 # marker to ignore all code on line
 ^.*/\* #no-spell-check-line \*/.*$
