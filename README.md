@@ -1,21 +1,20 @@
-Example
+# Example spell check
 
-
-This is an example README file that contains some spelling mistakes in order test `check-spelling`.
+This is an example README file that contains some spelling mistakes in order to test `check-spelling`.
 
 EXXXAMPLE
 
-[reference style link][link]
+Link text is checked, but URLs are ignored. [reference style link][link] and [inliiiine style links](https://example.com/spelllllling-mistake)
 
-This is an example README file that contains some spelling mistakes in order test `check-spelling`.
+Image sources should also be ignored, but alt text should be checked:
 
-This is an example README file that contains some spelling mistakes in order test `check-spelling`.
+<img src="/images/example-notword.png" alt="typro in alt">
 
-This is an example README file that contains some spelling mistakes in order test `check-spelling`.
+Inline code in backticks should be `ingnored`, and so should code blocks:
 
+```
+badspling in coddde
+```
 
-[link text](https://example.com/spelllllling-mistake)
-
-[Incorrrrrectly spelled link text](https://example.com/spelllllling-mistake)
-
-[link]: https://example.com/spelllllling-mistake
+[theeese refrence links are ignorrred]: https://exxample.xom
+[badspellink]: https://example.com/spelllllling-mistake
